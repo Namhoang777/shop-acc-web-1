@@ -1,5 +1,11 @@
 # 🎮 Shop Acc Blox Fruits 🎮
 
+![Shop Banner](banner.png)
+
+🔥 Uy tín — Giao acc nhanh 5-15 phút — Bảo hành login 48h 🔥
+
+# 🎮 Shop Acc Blox Fruits 🎮
+
 🔥 Uy tín — Giao acc nhanh 5-15 phút — Bảo hành login 48h 🔥
 
 ## 💎 Gói acc hiện có
