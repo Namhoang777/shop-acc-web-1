@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>Thanh toán</title><link rel="stylesheet" href="style.css" /></head>
+<body>
+  <header class="header"><div class="container"><div class="logo"><img src="assets/banner.png" alt="Banner"></div><nav><a href="index.html">Trang chủ</a><a href="buy.html">Mua Acc</a><a href="topup.html">Nạp thẻ</a><a href="contact.html">Liên hệ</a></nav></div></header>
+  <main class="container">
+    <h2>Thanh toán & Hướng dẫn nhận acc</h2>
+    <div id="info" class="card">
+      <p>Đang tải thông tin gói...</p>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3>Thông tin thanh toán</h3>
+      <p><b>MB Bank</b><br>STK: <span style="color:#7efc6a;">9704 xxxx xxxx 1234</span><br>Chủ TK: <b>Nguyễn Văn A</b></p>
+      <p><b>Thẻ cào</b><br>Viettel / Vinaphone / Mobifone — gửi mã thẻ qua Zalo: <b>0123456789</b></p>
+      <p class="notice">Sau khi chuyển tiền, chụp ảnh bill & gửi Zalo để xác nhận. Shop sẽ gửi thông tin acc trong 5-15 phút.</p>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h3>Xác nhận đã chuyển</h3>
+      <form id="confirmForm" onsubmit="return submitForm(event)">
+        <div class="form-row"><input name="name" placeholder="Họ tên" required></div>
+        <div class="form-row"><input name="phone" placeholder="Số điện thoại/Zalo" required></div>
+        <div class="form-row"><input name="note" placeholder="Gói bạn mua (ví dụ: 50K)" required></div>
+        <div class="form-row"><input name="proof" placeholder="Link ảnh bill hoặc nhập ID giao dịch" required></div>
+        <div class="form-row"><button class="btn" type="submit">Gửi xác nhận</button></div>
+      </form>
+      <div id="result" style="margin-top:12px;color:#9fb3cc;"></div>
+    </div>
+  </main>
+  <footer>© 2025 Shop Acc</footer>
+
+<script>
+function getQuery() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('item') || '20k';
+}
+
+const packs = {
+  '20k': { title: '20K - Acc Random (LV 1000 → Max)', price: '20K' },
+  '50k': { title: '50K - Acc Max + GHM', price: '50K' },
+  '100k': { title: '100K - Race V4 Max', price: '100K' },
+  '500k': { title: '500K - Full VIP', price: '500K' }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  const item = getQuery();
+  const info = packs[item] || packs['20k'];
+  document.getElementById('info').innerHTML = `<h3>${info.title}</h3><p>Giá: <b>${info.price}</b></p><p>Giao acc trong 5-15 phút sau khi xác nhận.</p>`;
+});
+
+function submitForm(e) {
+  e.preventDefault();
+  const form = document.getElementById('confirmForm');
+  const data = new FormData(form);
+  // This demo does not send anywhere. Show a friendly message.
+  document.getElementById('result').innerText = 'Cảm ơn! Yêu cầu của bạn đã được ghi nhận. Liên hệ Zalo để xác nhận thanh toán.';
+  form.reset();
+  return false;
+}
+</script>
+</body>
+</html>
