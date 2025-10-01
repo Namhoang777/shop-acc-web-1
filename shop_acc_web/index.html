@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Acc Blox Fruits</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; margin: 0; padding: 20px; }
+    .container { max-width: 800px; margin: auto; }
+    h1 { text-align: center; color: #111827; }
+    .card { background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    .card h2 { margin-top: 0; }
+    .price { font-size: 20px; font-weight: bold; color: #1d4ed8; }
+    .button { display: inline-block; padding: 10px 16px; background: #1d4ed8; color: #fff; border-radius: 8px; text-decoration: none; cursor: pointer; margin-top: 10px; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; }
+    .modal-content { background: #fff; padding: 20px; border-radius: 12px; max-width: 400px; text-align: center; }
+    .close { cursor: pointer; color: red; font-weight: bold; float: right; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 Shop Acc Blox Fruits 🎮</h1>
+
+    <div class="card">
+      <h2>Acc Random</h2>
+      <p>Từ LV 1000 đến LV Max</p>
+      <p class="price">20K</p>
+      <span class="button" onclick="showModal()">Mua ngay</span>
+    </div>
+
+    <div class="card">
+      <h2>Acc Max + GHM</h2>
+      <p>Level Max + Gamepass God Human</p>
+      <p class="price">50K</p>
+      <span class="button" onclick="showModal()">Mua ngay</span>
+    </div>
+
+    <div class="card">
+      <h2>Acc Race V4</h2>
+      <p>Race V4 + LV Max + CDK + Sgt</p>
+      <p class="price">100K</p>
+      <span class="button" onclick="showModal()">Mua ngay</span>
+    </div>
+
+    <div class="card">
+      <h2>Acc Full VIP</h2>
+      <p>FULL 6 Race V4 + FULL Gear</p>
+      <p class="price">500K</p>
+      <span class="button" onclick="showModal()">Mua ngay</span>
+    </div>
+  </div>
+
+  <div class="modal" id="payModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>💳 Thanh toán</h2>
+      <p><b>MB Bank:</b> 9704 xxxx xxxx 1234<br>Chủ TK: Nguyễn Văn A</p>
+      <p><b>Thẻ cào:</b> Viettel / Vinaphone / Mobifone</p>
+      <p>💡 Sau khi chuyển tiền, liên hệ Zalo: <b>0123456789</b> để nhận acc</p>
+    </div>
+  </div>
+
+  <script>
+    function showModal() { document.getElementById('payModal').style.display = 'flex'; }
+    function closeModal() { document.getElementById('payModal').style.display = 'none'; }
+  </script>
+</body>
+</html>
